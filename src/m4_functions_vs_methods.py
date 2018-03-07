@@ -273,7 +273,7 @@ def try_methods_and_functions():
     #
     #   NOTE: This function should ** CALL ** the
     #     draw_many_squares
-    #   function defined above.  If you don't see why, ** ASK FOR HELP. **
+    #   function defined above.  If you don't see why, ** ASK FOR HELP. ** 
     #
     ###########################################################################
 
