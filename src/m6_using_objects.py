@@ -15,6 +15,8 @@ def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
     two_circles()
+    circle_and_rectangle()
+    lines()
 
 
 def two_circles():
@@ -66,7 +68,24 @@ def circle_and_rectangle():
     -- Prints (on the console, on SEPARATE lines) the same data
          but for your rg.Rectangle.
     -- Waits for the user to press the mouse, then closes the window.
+    """
+    window = rg.RoseWindow()
+    rectangle = rg.Rectangle(rg.Point(50,50),rg.Point(250,250))
+    circle = rg. Circle(rg.Point(300,75),50)
+    circle.fill_color = 'gray'
 
+    print(circle.outline_thickness)
+    print(circle.fill_color)
+    print(circle.center)
+    print(circle.center.x)
+    print(circle.center.y)
+
+    rectangle.attach_to(window)
+    circle.attach_to(window)
+    window.render()
+
+    window.close_on_mouse_click()
+    """
     Here is an example of the output on the console,
     for one particular circle and rectangle:
            1
@@ -81,7 +100,7 @@ def circle_and_rectangle():
            150.0
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -92,6 +111,7 @@ def circle_and_rectangle():
 
 
 def lines():
+    window = rg.RoseWindow()
     """
     -- Constructs a rg.RoseWindow.
     -- Constructs and draws on the window two rg.Lines such that:
@@ -110,7 +130,21 @@ def lines():
             Point(110.5, 150.0)
             110.5
             150.0
+    """
+    line1 = rg.Line(rg.Point(50,100),rg.Point(100,50))
+    line2 = rg.Line(rg.Point(200,200),rg.Point(300,300))
+    line2.thickness = 10
 
+    print(line2.get_midpoint())
+
+    line1.attach_to(window)
+    line2.attach_to(window)
+    window.render()
+
+    window.close_on_mouse_click()
+
+
+    """
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
