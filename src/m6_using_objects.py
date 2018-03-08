@@ -135,7 +135,11 @@ def lines():
     line2 = rg.Line(rg.Point(200,200),rg.Point(300,300))
     line2.thickness = 10
 
-    print(line2.get_midpoint())
+    midp = line2.get_midpoint()
+
+    print(midp)
+    print(midp.x)
+    print(midp.y)
 
     line1.attach_to(window)
     line2.attach_to(window)
